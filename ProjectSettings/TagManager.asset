@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 760191819
+    locked: 0
+  - name: Plants
+    uniqueID: 1686048093
+    locked: 0
+  - name: Zombies
+    uniqueID: 1879994565
+    locked: 0
+  - name: Drop
+    uniqueID: 4141350239
+    locked: 0
