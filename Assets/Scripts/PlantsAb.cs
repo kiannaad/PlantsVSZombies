@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantsAb : MonoBehaviour, IBulletSetting
+public abstract class PlantsAb : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+     public Vector2 Bulletvelocity;
+     public Transform bulletLocation;
+
+     public virtual void Start()
+     {
+       
+     }
+
+    public virtual void ShootBullet()
+    {
+       
+    }
+
+    public virtual void PlaySound()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void BulletSetting()
+    public virtual void DeletebyShovel()
     {
         
     }

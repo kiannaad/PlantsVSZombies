@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 238148505352663495}
   - component: {fileID: 48761803323162384}
   - component: {fileID: 9080554350223917532}
+  - component: {fileID: 3427035364868025923}
   m_Layer: 0
   m_Name: Peashooter
   m_TagString: Untagged
@@ -30,7 +31,8 @@ Transform:
   m_LocalPosition: {x: -399.3, y: -22.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 946800296594025088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &48761803323162384
@@ -106,3 +108,49 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3427035364868025923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494279039928997011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ac7a880c1959d4c87bede8fe31e471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletLocation: {x: 33.5, y: 20.6, z: 0}
+  Bulletvelocity: {x: 100000, y: 0}
+  bulletLocation: {fileID: 946800296594025088}
+--- !u!1 &4026923100878289959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946800296594025088}
+  m_Layer: 0
+  m_Name: BulletLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &946800296594025088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026923100878289959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.5, y: 20.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 238148505352663495}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

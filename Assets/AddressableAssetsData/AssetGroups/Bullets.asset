@@ -20,7 +20,8 @@ MonoBehaviour:
   - m_GUID: f0f71501d305e264e82cae50837aa6df
     m_Address: PeaBullet
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - bullet
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d27b9a8776fd46c4aa38cf84ca0c73d1, type: 2}
