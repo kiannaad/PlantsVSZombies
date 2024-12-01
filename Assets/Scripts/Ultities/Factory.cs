@@ -16,18 +16,27 @@ public enum DropType
     Sum
 }
 
+public enum PlantType
+{
+    Peashooter,
+    SunFlower
+}
+
 public class Factory : MonoSingleton<Factory>
 {
-      [SerializeField] private Dictionary<string, GameObject> BulletPrefabs = new Dictionary<string, GameObject>();
-      [SerializeField] private Dictionary<string, GameObject> DropPrefabs = new Dictionary<string, GameObject>();
+      private Dictionary<string, GameObject> BulletPrefabs = new Dictionary<string, GameObject>();
+      private Dictionary<string, GameObject> DropPrefabs = new Dictionary<string, GameObject>();
+      private Dictionary<string, GameObject> PlantPrefabs = new Dictionary<string, GameObject>();
 
       private void Awake()
       {
           StartCoroutine(InitDictionary("bullet", BulletPrefabs));
           StartCoroutine(InitDictionary("drop", DropPrefabs));
+          StartCoroutine(InitDictionary("plant", PlantPrefabs));
       }
-
-      public void CreateBUllet(BulletType type, Vector2 ShootVelocity, Vector2 BullletPosition)
+        
+      #region Create
+      public GameObject CreateBUllet(BulletType type, Vector2 ShootVelocity, Vector2 BullletPosition)
       {
           if (BulletPrefabs.ContainsKey(type.ToString()))
           {
@@ -35,17 +44,35 @@ public class Factory : MonoSingleton<Factory>
 
               Rigidbody2D bulletR = bullet.GetComponent<Rigidbody2D>();
               bulletR.velocity = ShootVelocity * new Vector2(Time.deltaTime, Time.deltaTime);
+              
+              return bullet;
           }
+          return null;
       }
 
-      public void CreateSum(DropType type, Vector2 Position, int count)
+      public GameObject CreateSum(DropType type, Vector2 Position, int count)
       {
           if (DropPrefabs.ContainsKey(type.ToString()))
           {
               GameObject drop = Instantiate(DropPrefabs[type.ToString()], Position, Quaternion.identity);
+              return drop;
           }
+          return null;
       }
 
+      public GameObject CreatePlant(PlantType type, Vector2 Position)
+      {
+          if (PlantPrefabs.ContainsKey(type.ToString()))
+          {
+              GameObject plant = Instantiate(PlantPrefabs[type.ToString()], Position, Quaternion.identity);
+              return plant;
+          }
+
+          return null;
+      }
+      #endregion
+
+      #region Init
       private IEnumerator InitDictionary(string Label, Dictionary<string, GameObject> Prefabs)
       {
           var locationsAsync = Addressables.LoadResourceLocationsAsync(Label, typeof(GameObject));
@@ -79,4 +106,5 @@ public class Factory : MonoSingleton<Factory>
               Debug.Log(item.Key + " : " + item.Value.name);
           }
       }
+      #endregion
 }

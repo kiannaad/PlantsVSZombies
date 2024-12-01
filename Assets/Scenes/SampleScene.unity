@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 85277437}
   m_Layer: 0
   m_Name: box (6)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 121037166}
   - component: {fileID: 121037165}
   - component: {fileID: 121037164}
+  - component: {fileID: 121037167}
   m_Layer: 5
   m_Name: Card_SunFlower
   m_TagString: Untagged
@@ -332,8 +333,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dark: {fileID: 189974262}
   progress: {fileID: 93279904}
-  timer: 0
-  coolTime: 0
+  NeedSun: 50
+  coolTime: 7
+  plantType: 1
+  Health: 0
 --- !u!114 &121037165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +375,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121037162}
   m_CullTransparentMesh: 1
+--- !u!114 &121037167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121037162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 121037164}
+          m_TargetAssemblyTypeName: CardControl, Assembly-CSharp
+          m_MethodName: BeginDrag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 121037164}
+          m_TargetAssemblyTypeName: CardControl, Assembly-CSharp
+          m_MethodName: EndDrag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 121037164}
+          m_TargetAssemblyTypeName: CardControl, Assembly-CSharp
+          m_MethodName: Drag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &189974262
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +523,7 @@ GameObject:
   - component: {fileID: 235742001}
   m_Layer: 0
   m_Name: box (3)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,7 +604,7 @@ GameObject:
   - component: {fileID: 335075582}
   m_Layer: 0
   m_Name: box (6)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,7 +685,7 @@ GameObject:
   - component: {fileID: 349936690}
   m_Layer: 0
   m_Name: box (4)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,7 +802,7 @@ GameObject:
   - component: {fileID: 475613041}
   m_Layer: 0
   m_Name: box
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -818,7 +882,7 @@ GameObject:
   - component: {fileID: 477047722}
   - component: {fileID: 477047723}
   m_Layer: 0
-  m_Name: Line 0 (2)
+  m_Name: Line 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -888,7 +952,7 @@ GameObject:
   - component: {fileID: 504303903}
   m_Layer: 0
   m_Name: box (6)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,7 +1033,7 @@ GameObject:
   - component: {fileID: 506742616}
   m_Layer: 0
   m_Name: box (3)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,7 +1206,7 @@ GameObject:
   - component: {fileID: 546685963}
   m_Layer: 0
   m_Name: box (8)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1292,7 +1356,7 @@ GameObject:
   - component: {fileID: 573488674}
   m_Layer: 0
   m_Name: box (8)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1373,7 +1437,7 @@ GameObject:
   - component: {fileID: 575825935}
   m_Layer: 0
   m_Name: box (5)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1454,7 +1518,7 @@ GameObject:
   - component: {fileID: 580286095}
   m_Layer: 0
   m_Name: box (6)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1603,7 +1667,7 @@ GameObject:
   - component: {fileID: 649663646}
   m_Layer: 0
   m_Name: box
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1684,7 +1748,7 @@ GameObject:
   - component: {fileID: 659941993}
   m_Layer: 0
   m_Name: box (5)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1765,7 +1829,7 @@ GameObject:
   - component: {fileID: 703518474}
   m_Layer: 0
   m_Name: box (4)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1845,7 +1909,7 @@ GameObject:
   - component: {fileID: 714326350}
   - component: {fileID: 714326351}
   m_Layer: 0
-  m_Name: Line 0 (1)
+  m_Name: Line 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1915,7 +1979,7 @@ GameObject:
   - component: {fileID: 730295944}
   m_Layer: 0
   m_Name: box (3)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1995,7 +2059,7 @@ GameObject:
   - component: {fileID: 739906397}
   - component: {fileID: 739906398}
   m_Layer: 0
-  m_Name: Line 0 (3)
+  m_Name: Line 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2064,6 +2128,7 @@ GameObject:
   - component: {fileID: 782380731}
   - component: {fileID: 782380730}
   - component: {fileID: 782380729}
+  - component: {fileID: 782380732}
   m_Layer: 5
   m_Name: SunNum
   m_TagString: Untagged
@@ -2189,6 +2254,21 @@ RectTransform:
   m_AnchoredPosition: {x: -225.5, y: -27.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &782380732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782380728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be814bd5f29cbca42b6ac4b60681caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cardControls: []
+  CarParent: {fileID: 1793994691}
+  GetSunNumValue: 0
 --- !u!1 &801671748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2281,7 @@ GameObject:
   - component: {fileID: 801671750}
   m_Layer: 0
   m_Name: box (8)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2282,7 +2362,7 @@ GameObject:
   - component: {fileID: 932514338}
   m_Layer: 0
   m_Name: box (4)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2494,12 +2574,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 1000}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.444
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2528,53 +2608,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1075420712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1075420714}
-  - component: {fileID: 1075420713}
-  m_Layer: 0
-  m_Name: CardSlotsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1075420713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075420712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79bc36b772c64b4daa6c62ee2113f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CardSlotsParent: {fileID: 1793994691}
-  CardSlots: []
-  SunNum: {fileID: 782380728}
---- !u!4 &1075420714
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075420712}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1075551827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2620,7 @@ GameObject:
   - component: {fileID: 1075551829}
   m_Layer: 0
   m_Name: box (4)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2668,7 +2701,7 @@ GameObject:
   - component: {fileID: 1129352860}
   m_Layer: 0
   m_Name: box (1)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2749,7 +2782,7 @@ GameObject:
   - component: {fileID: 1146257333}
   m_Layer: 0
   m_Name: box (2)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2891,7 +2924,7 @@ GameObject:
   - component: {fileID: 1183887876}
   m_Layer: 0
   m_Name: box (2)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3047,7 +3080,7 @@ GameObject:
   - component: {fileID: 1224722979}
   m_Layer: 0
   m_Name: box (1)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3128,7 +3161,7 @@ GameObject:
   - component: {fileID: 1262983328}
   m_Layer: 0
   m_Name: box
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3209,7 +3242,7 @@ GameObject:
   - component: {fileID: 1272857430}
   m_Layer: 0
   m_Name: box (2)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3290,7 +3323,7 @@ GameObject:
   - component: {fileID: 1281721963}
   m_Layer: 0
   m_Name: box (7)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3371,7 +3404,7 @@ GameObject:
   - component: {fileID: 1298171799}
   m_Layer: 0
   m_Name: box
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3452,7 +3485,7 @@ GameObject:
   - component: {fileID: 1368744692}
   m_Layer: 0
   m_Name: box (1)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3533,7 +3566,7 @@ GameObject:
   - component: {fileID: 1405417567}
   m_Layer: 0
   m_Name: box (6)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3614,7 +3647,7 @@ GameObject:
   - component: {fileID: 1461945463}
   m_Layer: 0
   m_Name: box (3)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3695,7 +3728,7 @@ GameObject:
   - component: {fileID: 1461980438}
   m_Layer: 0
   m_Name: box
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3776,6 +3809,7 @@ GameObject:
   - component: {fileID: 1516484696}
   - component: {fileID: 1516484695}
   - component: {fileID: 1516484694}
+  - component: {fileID: 1516484697}
   m_Layer: 5
   m_Name: Card_PeaShooter
   m_TagString: Untagged
@@ -3818,8 +3852,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dark: {fileID: 1192997687}
   progress: {fileID: 954128602}
-  timer: 0
-  coolTime: 0
+  NeedSun: 100
+  coolTime: 10
+  plantType: 0
+  Health: 0
 --- !u!114 &1516484695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,6 +3894,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516484692}
   m_CullTransparentMesh: 1
+--- !u!114 &1516484697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516484692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1516484694}
+          m_TargetAssemblyTypeName: CardControl, Assembly-CSharp
+          m_MethodName: BeginDrag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1516484694}
+          m_TargetAssemblyTypeName: CardControl, Assembly-CSharp
+          m_MethodName: EndDrag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1516484694}
+          m_TargetAssemblyTypeName: CardControl, Assembly-CSharp
+          m_MethodName: Drag
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1525522459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,7 +3967,7 @@ GameObject:
   - component: {fileID: 1525522461}
   m_Layer: 0
   m_Name: box (7)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3950,7 +4047,7 @@ GameObject:
   - component: {fileID: 1529101359}
   - component: {fileID: 1529101360}
   m_Layer: 0
-  m_Name: Line 0 (4)
+  m_Name: Line 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4020,7 +4117,7 @@ GameObject:
   - component: {fileID: 1592394098}
   m_Layer: 0
   m_Name: box (5)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4101,7 +4198,7 @@ GameObject:
   - component: {fileID: 1596754566}
   m_Layer: 0
   m_Name: box (8)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4182,7 +4279,7 @@ GameObject:
   - component: {fileID: 1601531325}
   m_Layer: 0
   m_Name: box (2)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4263,7 +4360,7 @@ GameObject:
   - component: {fileID: 1744256652}
   m_Layer: 0
   m_Name: box (7)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4344,7 +4441,7 @@ GameObject:
   - component: {fileID: 1751927820}
   m_Layer: 0
   m_Name: box (2)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4425,7 +4522,7 @@ GameObject:
   - component: {fileID: 1757168319}
   m_Layer: 0
   m_Name: box (3)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4506,7 +4603,7 @@ GameObject:
   - component: {fileID: 1765076356}
   m_Layer: 0
   m_Name: box (7)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4665,7 +4762,7 @@ GameObject:
   - component: {fileID: 1850421115}
   m_Layer: 0
   m_Name: box (1)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4746,7 +4843,7 @@ GameObject:
   - component: {fileID: 1851159642}
   m_Layer: 0
   m_Name: box (1)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4815,6 +4912,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 73.57068, y: 97.055756}
   m_EdgeRadius: 0
+--- !u!1 &1863304767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863304769}
+  - component: {fileID: 1863304768}
+  m_Layer: 0
+  m_Name: Factory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1863304768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863304767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c6b32baafde44389d80811df7bdd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1863304769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863304767}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927401297
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,7 +4968,7 @@ GameObject:
   - component: {fileID: 1927401299}
   m_Layer: 0
   m_Name: box (7)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4908,7 +5049,7 @@ GameObject:
   - component: {fileID: 1977228763}
   m_Layer: 0
   m_Name: box (4)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5050,7 +5191,7 @@ GameObject:
   - component: {fileID: 2069386008}
   m_Layer: 0
   m_Name: box (5)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5131,7 +5272,7 @@ GameObject:
   - component: {fileID: 2078432909}
   m_Layer: 0
   m_Name: box (8)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5212,7 +5353,7 @@ GameObject:
   - component: {fileID: 2133500733}
   m_Layer: 0
   m_Name: box (5)
-  m_TagString: Untagged
+  m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5359,7 +5500,7 @@ Transform:
   m_GameObject: {fileID: 2145941733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5500,4 +5641,4 @@ SceneRoots:
   - {fileID: 1169094046}
   - {fileID: 1050718200}
   - {fileID: 607662671}
-  - {fileID: 1075420714}
+  - {fileID: 1863304769}
