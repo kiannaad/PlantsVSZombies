@@ -50,7 +50,7 @@ public class CardControl : MonoBehaviour
    {
        if (!IsUpdating)
        {
-           Debug.Log("Checking use");
+           //Debug.Log("Checking use");
            if (GetSunNum.Instance.GetSunNumValue >= NeedSun)
                dark.SetActive(false);
            else

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
 public class SumControl : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class SumControl : MonoBehaviour
     private bool DontMove;*/
 
     private Transform sum;
+    public Vector2 MoveTo;
+    private bool IsMoving;
 
     private void Awake()
     {
@@ -42,8 +45,25 @@ public class SumControl : MonoBehaviour
     
     private IEnumerator Delete()
     {
-        gameObject.GetComponent<SpriteRenderer>().DOBlendableColor(new Color(0, 0, 0, 0), 1f);
-        yield return new WaitForSeconds(1f);
+        if (!IsMoving)
+        {
+            gameObject.GetComponent<SpriteRenderer>().DOBlendableColor(new Color(0, 0, 0, 0), 1f);
+            yield return new WaitForSeconds(1f);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        StartCoroutine("MouseDown");
+    }
+
+    private IEnumerator MouseDown()
+    {
+        IsMoving = true;
+        transform.DOMove(MoveTo, 2f);
+        yield return new WaitForSeconds(2f);
+        GetSunNum.Instance.ModifySunUp(50);
         Destroy(gameObject);
     }
     /*private void Push()

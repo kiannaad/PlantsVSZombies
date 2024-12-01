@@ -103,7 +103,7 @@ public class Factory : MonoSingleton<Factory>
 
           foreach (var item in Prefabs)
           {
-              Debug.Log(item.Key + " : " + item.Value.name);
+              //Debug.Log(item.Key + " : " + item.Value.name);
           }
       }
       #endregion

@@ -5,12 +5,10 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class PeaBulletComtrol : MonoBehaviour
+public class PeaBulletComtrol : BulletBase
 {
-    public AsyncOperationHandle<GameObject> PeaBullet;
-
-    private void OnDestroy()
+    public void DoDamage()
     {
-
+        
     }
 }
