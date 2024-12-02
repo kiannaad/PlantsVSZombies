@@ -14,10 +14,16 @@ public class Pea : PlantsAb
         base.Start();
     }
 
+    private void Update()
+    {
+        //Debug.Log(CheckForZombie);
+    }
+
     public override void ShootBullet()
     {
         base.ShootBullet();
         
+        if (CheckForZombie)
         Factory.Instance.CreateBUllet(BulletType.PeaBullet, Bulletvelocity,bulletLocation.position);
     }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class SunFlower : MonoBehaviour
+public class SunFlower : MonoBehaviour,IPAttacked
 {
     [Header("Time Count")]
     [SerializeField] private float timer;
@@ -13,13 +13,19 @@ public class SunFlower : MonoBehaviour
     private Animator animator;
     private bool CanCount;
     private int sumNum;
+    
+    private BoxCollider2D boxCollider;
+
+    public float Health;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
         timer = ReadyTimer;
         CanCount = true;
+        
     }
 
     private void Update()
@@ -62,5 +68,14 @@ public class SunFlower : MonoBehaviour
         }
         randomY = Random.Range(transform.position.y - 20, transform.position.y + 20);
         return new Vector2(randomX, randomY);
+    }
+
+    public void GetDamage(float damage)
+    {
+        Health -= damage;
+        if (Health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

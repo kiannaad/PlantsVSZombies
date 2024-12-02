@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 48761803323162384}
   - component: {fileID: 9080554350223917532}
   - component: {fileID: 3427035364868025923}
+  - component: {fileID: 7404652771829967105}
   m_Layer: 0
   m_Name: Peashooter
   m_TagString: Untagged
@@ -120,9 +121,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ac7a880c1959d4c87bede8fe31e471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletLocation: {x: 33.5, y: 20.6, z: 0}
   Bulletvelocity: {x: 100000, y: 0}
   bulletLocation: {fileID: 946800296594025088}
+  Health: 20
+--- !u!61 &7404652771829967105
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494279039928997011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.796875, y: 3.5063133}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 71, y: 71}
+    newSize: {x: 71, y: 71}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 54.105957, y: 63.987373}
+  m_EdgeRadius: 0
 --- !u!1 &4026923100878289959
 GameObject:
   m_ObjectHideFlags: 0

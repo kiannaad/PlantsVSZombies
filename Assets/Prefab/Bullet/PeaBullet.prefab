@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2174622542031503842}
   - component: {fileID: 8386143302319568821}
   - component: {fileID: 3964671854211321642}
+  - component: {fileID: 1575169641959574245}
   m_Layer: 0
   m_Name: PeaBullet
   m_TagString: Untagged
@@ -125,3 +126,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f8d6dfc985ac645bc975e4714b40cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  causeDamage: 5
+--- !u!58 &1575169641959574245
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846642999941133525}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 11.622509, y: 0}
+  serializedVersion: 2
+  m_Radius: 11.841877

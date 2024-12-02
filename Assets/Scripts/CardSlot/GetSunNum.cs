@@ -27,7 +27,7 @@ public class GetSunNum : MonoSingleton<GetSunNum>
         if (currentSunNum != GetSunNumValue)
         {
             currentSunNum = GetSunNumValue;
-            Debug.Log(currentSunNum);
+            //Debug.Log(currentSunNum);
             foreach (var card in _cardControls)
             {
                 card.CheckUse();

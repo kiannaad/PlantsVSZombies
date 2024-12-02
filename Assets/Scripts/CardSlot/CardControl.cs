@@ -30,7 +30,6 @@ public class CardControl : MonoBehaviour
 
    private void Update()
    {
-      
    }
 
    public IEnumerator UpdateCard()
@@ -72,6 +71,7 @@ public class CardControl : MonoBehaviour
        {
            DragObject = Factory.Instance.CreatePlant(plantType, Camera.main.ScreenToWorldPoint(Input.mousePosition));
            DragObject.GetComponent<Animator>().speed = 0f;
+           DragObject.GetComponent<BoxCollider2D>().enabled = false;
        }
    }
 
@@ -86,6 +86,7 @@ public class CardControl : MonoBehaviour
 
    public void EndDrag(BaseEventData eventData)
    {
+       Debug.Log(Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)).tag);
        if (!dark.activeInHierarchy && DragObject != null)
        {
            if (Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)) && Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)).CompareTag("Land"))
@@ -94,6 +95,7 @@ public class CardControl : MonoBehaviour
                Collider.gameObject.tag = "Untagged";
                DragObject.transform.position = Collider.transform.position - new Vector3(- 30f, 40f, 0f);
                DragObject.GetComponent<Animator>().speed = 1f;
+               DragObject.GetComponent<BoxCollider2D>().enabled = true;
                UseCard();
            }
            else
