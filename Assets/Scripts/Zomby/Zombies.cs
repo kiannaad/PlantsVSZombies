@@ -10,6 +10,7 @@ public class Zombies : MonoBehaviour, IZAttacked
    private Animator ani;
    private Animator aniHead;
    private SpriteRenderer sr;
+   public Animator aniFire;
 
    public GameObject Head;
    
@@ -91,7 +92,7 @@ public class Zombies : MonoBehaviour, IZAttacked
    #endregion
 
    //实现IZAttacked
-   public void GetDamage(float damage)
+   public void GetDamage(float damage, bool IsFire)
    {
       Health -= damage;
       if (Health <= 0)
@@ -102,6 +103,12 @@ public class Zombies : MonoBehaviour, IZAttacked
          }
 
          IsDead = true;
+      }
+
+      if (IsFire)
+      {
+         aniFire.SetBool("Fire", false);
+         aniFire.SetBool("Fire", true);
       }
    }
 

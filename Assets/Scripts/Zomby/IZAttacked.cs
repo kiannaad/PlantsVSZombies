@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IZAttacked
 {
-   public void GetDamage(float damage);
+   public void GetDamage(float damage, bool isFire);
 }

@@ -71,7 +71,13 @@ public class CardControl : MonoBehaviour
        {
            DragObject = Factory.Instance.CreatePlant(plantType, Camera.main.ScreenToWorldPoint(Input.mousePosition));
            DragObject.GetComponent<Animator>().speed = 0f;
-           DragObject.GetComponent<BoxCollider2D>().enabled = false;
+           if (!DragObject.GetComponent<BoxCollider2D>())
+               throw new AggregateException("Drag object is missing a BoxCollider2D");
+           else
+           {
+               DragObject.GetComponent<BoxCollider2D>().enabled = false;
+           }
+           
        }
    }
 

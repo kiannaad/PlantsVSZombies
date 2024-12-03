@@ -12,5 +12,5 @@ public abstract class BulletBase : MonoBehaviour
    public abstract void OnTriggerExit2D (Collider2D other);
    
    public abstract void OnTriggerStay2D (Collider2D other);
-
+   
 }

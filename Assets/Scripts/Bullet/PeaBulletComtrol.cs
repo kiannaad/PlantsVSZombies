@@ -1,15 +1,21 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class PeaBulletComtrol : BulletBase
 {
+    private Animator animator;
+
+    private bool isFire;
     private void Start()
     {
+        animator = GetComponent<Animator>();
         StartCoroutine("Disappearing");
+    }
+
+    private void Update()
+    {
+      
     }
 
     private IEnumerator Disappearing()
@@ -22,7 +28,9 @@ public class PeaBulletComtrol : BulletBase
     {
         if (other.CompareTag("Zomby"))
         {
-            other.gameObject.GetComponent<IZAttacked>().GetDamage(causeDamage);
+            if (animator.GetBool("CanFire"))
+                isFire = true;
+            other.gameObject.GetComponent<IZAttacked>().GetDamage(causeDamage, isFire);
             Destroy(this.gameObject);
         }
     }
