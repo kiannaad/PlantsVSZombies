@@ -11,6 +11,8 @@ public class Zombies : MonoBehaviour, IZAttacked
    private Animator aniHead;
    private SpriteRenderer sr;
    public Animator aniFire;
+   public AudioSource audio1;
+   public AudioSource audio2;
 
    public GameObject Head;
    
@@ -23,9 +25,11 @@ public class Zombies : MonoBehaviour, IZAttacked
    private bool IsDead;
    private bool IsEatting;
    private bool IsAttacking;
+   private bool IsPlayingFX;
 
    public float Health;
    public float attack;
+   
    
    private void SetZeroVelocity() => rb.velocity = Vector2.zero;
 
@@ -77,6 +81,13 @@ public class Zombies : MonoBehaviour, IZAttacked
          //造成伤害
          if (!IsAttacking)
          StartCoroutine(Attack(other));
+
+         if (!IsPlayingFX)
+         {
+            AudioManager.Instance.PlayFX(FXType.chomp, audio1);
+            AudioManager.Instance.PlayFX(FXType.chompsoft, audio2);
+            IsPlayingFX = true;
+         }
       }
    }
 
@@ -87,7 +98,10 @@ public class Zombies : MonoBehaviour, IZAttacked
          CanMove = true;
          ani.SetBool("CanEat", false);
          IsEatting = false;
+         IsPlayingFX = false;
       }
+      
+      //AudioManager.Instance.StopFX();
    }
    #endregion
 

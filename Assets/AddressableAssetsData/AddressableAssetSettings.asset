@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 6713ed1ec0f8a8a4a891b959a37d9d44
   m_currentHash:
     serializedVersion: 2
-    Hash: 2b64981f39bdea2ae3db4598b5cc6654
+    Hash: a25dbcb69990b3b0454e16ae279d3c3d
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -48,6 +48,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fe83254b47915904a8748332dbf8b4f6, type: 2}
   - {fileID: 11400000, guid: cfbd3eccbde64b943b79311698771291, type: 2}
   - {fileID: 11400000, guid: 4c381d70938cc034c85fd3f1645e7aaa, type: 2}
+  - {fileID: 11400000, guid: 7363ccc768d43c2439b977833f74ff0a, type: 2}
+  - {fileID: 11400000, guid: f20d2bf18c92f524c949c27847d5797f, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -92,6 +94,8 @@ MonoBehaviour:
     - bullet
     - plant
     - drop
+    - FX
+    - BGM
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 7c6e4b8a4cddc7341ad4c9f29ae7285e, type: 2}

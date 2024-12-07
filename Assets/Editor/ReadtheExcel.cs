@@ -12,7 +12,7 @@ public class StartUp
 {
     static StartUp()
     {
-        Debug.Log("StartUp");
+        //Debug.Log("StartUp");
         string path = Application.dataPath + "/Editor/关卡管理.xlsx";
         string assetName = "Level";
          
@@ -27,11 +27,11 @@ public class StartUp
             {
                 LevelItem levelItem = new LevelItem(); 
                 Type type = typeof(LevelItem);
-                Debug.Log(worksheet.GetValue(3, 3).ToString()); 
+               //Debug.Log(worksheet.GetValue(3, 3).ToString()); 
                 for (int j = worksheet.Dimension.Start.Column; j <= worksheet.Dimension.End.Column; j++)
                 {
-                    Debug.Log(i + " " + j);
-                    Debug.Log("数据内容 ：" + worksheet.GetValue(i, j));
+                    //Debug.Log(i + " " + j);
+                    //Debug.Log("数据内容 ：" + worksheet.GetValue(i, j));
                     FieldInfo variable = type.GetField(worksheet.GetValue(2, j).ToString()); 
                    
                     string tableValue = worksheet.GetValue(i, j).ToString();
