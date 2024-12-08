@@ -27,13 +27,13 @@ public class BoxControll : MonoBehaviour
       Debug.Log("OnPointerClick");
       if (!isMoving)
       {
-         if (isDarking == false)
+         if (isDarking == false && CardSlots.currentPoint < 8)
          {
             transform.SetParent(CardSlots.transform);
             CardSlots.AddCard(this.gameObject);
             isDarking = true;
          }
-         else
+         else if (isDarking == true)
          {
             transform.SetParent(Dark.transform);
             StartCoroutine(Returnmove());

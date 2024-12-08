@@ -10,7 +10,7 @@ public class CardSlotsControl : MonoBehaviour
     public GameObject[] location;
     private Vector2[] positions;
 
-    private int currentPoint = 0;
+    public int currentPoint = 0;
     private void Start()
     {
         positions = new Vector2[8];
