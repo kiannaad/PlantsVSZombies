@@ -93,6 +93,8 @@ public class Zombies : MonoBehaviour, IZAttacked
 
    private void OnTriggerExit2D(Collider2D other)
    {
+      audio1.Stop();
+      audio2.Stop();
       if (other.gameObject.CompareTag("Plant"))
       {
          CanMove = true;
@@ -100,7 +102,6 @@ public class Zombies : MonoBehaviour, IZAttacked
          IsEatting = false;
          IsPlayingFX = false;
       }
-      
       //AudioManager.Instance.StopFX();
    }
    #endregion

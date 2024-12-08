@@ -86,7 +86,7 @@ public class CardControl : MonoBehaviour
        if (!dark.activeInHierarchy && DragObject != null)
        {
            //Debug.Log(eventData.ToString());
-           DragObject.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+           DragObject.transform.position = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
        }
    }
 

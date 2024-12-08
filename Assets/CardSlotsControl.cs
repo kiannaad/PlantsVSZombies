@@ -10,6 +10,7 @@ public class CardSlotsControl : MonoBehaviour
     public GameObject[] location;
     private Vector2[] positions;
 
+    private int currentPoint = 0;
     private void Start()
     {
         positions = new Vector2[8];
@@ -19,7 +20,11 @@ public class CardSlotsControl : MonoBehaviour
         }
     }
 
-    public void AddCard(GameObject card) => Cards.Add(card);
+    public void AddCard(GameObject card)
+    {
+        Cards.Add(card);
+        Move(card);
+    }
 
     public void RemoveCard(GameObject card)
     {
@@ -30,12 +35,13 @@ public class CardSlotsControl : MonoBehaviour
 
     public void CheckForfill()
     {
-        for (int i = Cards.Count - 1; i > 0; i--)
+        for (int i = Cards.Count - 1; i >= 0; i--)
         {
             if (Cards[i - 1] == null)
             {
                 //整体丝滑的移到前一个位置
                 MoveToNext(i);
+                currentPoint--;
             }
         }
     }
@@ -44,12 +50,17 @@ public class CardSlotsControl : MonoBehaviour
     {
         for (int i = chos; i < Cards.Count; i++)
         {
-            Move(i);
+            Cards[i].transform.DOMove(positions[i - 1], .2f);
         }
     }
 
-    private void Move(int i)
+    private void Move(GameObject card)
     {
-        Cards[i].transform.DOMove(positions[i - 1], .2f);
+        if (currentPoint < 8)
+        card.transform.DOMove(positions[currentPoint ++], .2f);
+        else
+        {
+            Debug.Log("超出范围了");
+        }
     }
 }

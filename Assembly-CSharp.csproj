@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Ignore\CardData.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Bullet\PeaBulletComtrol.cs" />
+    <Compile Include="Assets\BoxControll.cs" />
     <Compile Include="Assets\Scripts\Plant\SumControl.cs" />
     <Compile Include="Assets\BackGroundSound.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
