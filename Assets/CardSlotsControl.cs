@@ -23,41 +23,45 @@ public class CardSlotsControl : MonoBehaviour
     public void AddCard(GameObject card)
     {
         Cards.Add(card);
-        Move(card);
+        StartCoroutine(FillMove(card));
     }
 
     public void RemoveCard(GameObject card)
     {
-        Cards.Remove(card);
-        CheckForfill();
-    }
-
-
-    public void CheckForfill()
-    {
-        for (int i = Cards.Count - 1; i >= 0; i--)
+        for (int i = 0; i < Cards.Count; i++)
         {
-            if (Cards[i - 1] == null)
+            if (Cards[i] == card)
             {
-                //整体丝滑的移到前一个位置
-                MoveToNext(i);
-                currentPoint--;
+                StartCoroutine(FillOutMove(i));
+                
             }
         }
     }
 
-    private void MoveToNext(int chos)
+
+    public IEnumerator FillOutMove(int j)
     {
-        for (int i = chos; i < Cards.Count; i++)
+        currentPoint--;
+        for (int i = j + 1; i < Cards.Count; i++)
         {
-            Cards[i].transform.DOMove(positions[i - 1], .2f);
+            Cards[i].GetComponent<BoxControll>().isMoving = true;
+            Cards[i].transform.DOMove(positions[i - 1], .1f);
+            yield return new WaitForSeconds(.1f);
         }
+        for (int i = j + 1; i < Cards.Count; i++)
+        Cards[i].GetComponent<BoxControll>().isMoving = false;
+        Cards.RemoveAt(j);
     }
 
-    private void Move(GameObject card)
+    private IEnumerator FillMove(GameObject card)
     {
         if (currentPoint < 8)
-        card.transform.DOMove(positions[currentPoint ++], .2f);
+        {
+            card.GetComponent<BoxControll>().isMoving = true;
+            card.transform.DOMove(positions[currentPoint++], .2f);
+            yield return new WaitForSeconds(.2f);
+            card.GetComponent<BoxControll>().isMoving = false;
+        }
         else
         {
             Debug.Log("超出范围了");
