@@ -17,12 +17,14 @@ public class GetSunNum : MonoSingleton<GetSunNum>
     private void Awake()
     {
         sunNumText = GetComponent<TextMeshProUGUI>();
-        _cardControls = CarParent.GetComponentsInChildren<CardControl>();
         currentSunNum = int.Parse(sunNumText.text);
     }
 
     private void Update()
     {
+        if (UIManager.Instance.isReady)
+            _cardControls = CarParent.GetComponentsInChildren<CardControl>();
+        
           GetSunNumValue = int.Parse(sunNumText.text);
         if (currentSunNum != GetSunNumValue)
         {

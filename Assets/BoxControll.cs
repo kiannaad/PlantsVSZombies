@@ -16,10 +16,20 @@ public class BoxControll : MonoBehaviour
    
    public CardSlotsControl CardSlots;
    public GameObject Dark;
+   public GameObject Prefab;
 
    private void Awake()
    {
       returnPositon = transform.position;
+   }
+
+   private void Update()
+   {
+      if (isDarking && UIManager.Instance.isReady)
+      {
+         Instantiate(Prefab, transform.position, Quaternion.identity, CardSlots.transform);
+         Destroy(gameObject);
+      }
    }
    
    public void OnMouseDown()

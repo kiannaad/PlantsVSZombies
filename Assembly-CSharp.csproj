@@ -52,6 +52,7 @@
     <Compile Include="Assets\GetFire.cs" />
     <Compile Include="Assets\Scripts\CardSlot\GetSunNum.cs" />
     <Compile Include="Assets\Scripts\Plant\PlantsAb.cs" />
+    <Compile Include="Assets\UIManager.cs" />
     <Compile Include="Assets\Scripts\Zomby\Zombies.cs" />
     <Compile Include="Assets\Scripts\TorchwoodControl.cs" />
     <Compile Include="Assets\Scripts\CardSlot\CardControl.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Bullet\PeaBulletComtrol.cs" />
     <Compile Include="Assets\BoxControll.cs" />
+    <Compile Include="Assets\CardStart.cs" />
     <Compile Include="Assets\Scripts\Plant\SumControl.cs" />
     <Compile Include="Assets\BackGroundSound.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
