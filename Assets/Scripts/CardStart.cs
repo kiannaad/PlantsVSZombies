@@ -19,7 +19,7 @@ public class CardStart : MonoBehaviour
       UIManager.Instance.StartMoveHeadler(Positionslot, Positionselected, CameraPosition, gameObject, CardSelected);
       StartCoroutine("PlayReady");
    }
-
+   
    private IEnumerator PlayReady()
    {
       Image sr = StartReady.GetComponent<Image>();

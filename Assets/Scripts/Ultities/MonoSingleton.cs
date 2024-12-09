@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
+   public bool IsGlobal = true;
    private static T _instance;
    private readonly static object _lock = new object();
 
@@ -40,6 +41,7 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
       }
       
       _instance = this as T;
+      if (IsGlobal)
       DontDestroyOnLoad(this.gameObject);
    }
 }

@@ -12,6 +12,7 @@ public class UIManager : MonoSingleton<UIManager>
 
     private void Awake()
     {
+        IsGlobal = false;
         LineParent.SetActive(false);
         isReady = false;
         startUi += MoveStart;
@@ -41,7 +42,7 @@ public class UIManager : MonoSingleton<UIManager>
         
         Camera.main.transform.DOMove(CameraPosition, 0.1f);
         
-         yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
          
     }
     #endregion 
