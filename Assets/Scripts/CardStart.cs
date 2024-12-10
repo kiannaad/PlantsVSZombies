@@ -16,7 +16,7 @@ public class CardStart : MonoBehaviour
 
    public void StartInvoked()
    {
-      UIManager.Instance.StartMoveHeadler(Positionslot, Positionselected, CameraPosition, gameObject, CardSelected);
+      UIStartGame.Instance.StartMoveHeadler(Positionslot, Positionselected, CameraPosition, gameObject, CardSelected);
       StartCoroutine("PlayReady");
    }
    
@@ -33,7 +33,7 @@ public class CardStart : MonoBehaviour
       yield return new WaitForSeconds(1f);
       sr.sprite = null;
       sr.color = new Color(1f, 1f, 1f, 0f);
-      UIManager.Instance.isReady = true;
-      UIManager.Instance.LineParent.SetActive(true);
+      UIStartGame.Instance.isReady = true;
+      UIStartGame.Instance.LineParent.SetActive(true);
    }
 }

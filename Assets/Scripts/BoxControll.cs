@@ -25,7 +25,7 @@ public class BoxControll : MonoBehaviour
 
    private void Update()
    {
-      if (isDarking && UIManager.Instance.isReady)
+      if (isDarking && UIStartGame.Instance.isReady)
       {
          Instantiate(Prefab, transform.position, Quaternion.identity, CardSlots.transform);
          Destroy(gameObject);

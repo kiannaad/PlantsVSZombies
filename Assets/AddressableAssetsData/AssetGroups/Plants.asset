@@ -16,19 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 6713ed1ec0f8a8a4a891b959a37d9d44
-  m_SerializeEntries:
-  - m_GUID: 85cc4d4ae70c8ea4dac75374e2472606
-    m_Address: Peashooter
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - plant
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: dc68b4e88c90a284880dfbdeb68df9dd
-    m_Address: SunFlower
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - plant
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d27b9a8776fd46c4aa38cf84ca0c73d1, type: 2}
   m_SchemaSet:

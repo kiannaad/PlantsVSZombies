@@ -16,43 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d2c5863db8209c24ba10776106896f8e
-  m_SerializeEntries:
-  - m_GUID: 29cc30fbbffa96b49b76c626112e9820
-    m_Address: Start_slow
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BGM
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9bc118fce97174e4fb2acc85d82a55cb
-    m_Address: Start_middle
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BGM
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4295ad4c8d4c219498800bd9dc2517ff
-    m_Address: UI_Start
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BGM
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 288c96ba0005552478d475e4479e01d0
-    m_Address: Progress
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BGM
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ecdedcd7bc657e44781225b682c6e052
-    m_Address: Start_fast
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BGM
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e24dec0b6d2bb8342845430647d5702a
-    m_Address: ThemeSong
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - BGM
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d27b9a8776fd46c4aa38cf84ca0c73d1, type: 2}
   m_SchemaSet:

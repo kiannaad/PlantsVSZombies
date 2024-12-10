@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\start.cs" />
     <Compile Include="Assets\Scripts\Ultities\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\GetFire.cs" />
+    <Compile Include="Assets\Scripts\UIStartGame.cs" />
     <Compile Include="Assets\Scripts\Ignore\CardSlotsManager.cs" />
     <Compile Include="Assets\Scripts\CardSlotsControl.cs" />
     <Compile Include="Assets\Scripts\BackGroundSound.cs" />

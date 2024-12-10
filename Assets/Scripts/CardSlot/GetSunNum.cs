@@ -22,7 +22,7 @@ public class GetSunNum : MonoSingleton<GetSunNum>
 
     private void Update()
     {
-        if (UIManager.Instance.isReady)
+        if (UIStartGame.Instance.isReady)
             _cardControls = CarParent.GetComponentsInChildren<CardControl>();
         
           GetSunNumValue = int.Parse(sunNumText.text);
